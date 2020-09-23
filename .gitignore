@@ -1,0 +1,10 @@
+# log files
+*.log
+
+# idea files
+.idea/*
+
+# python
+armageddon.egg-info
+**/__pycache__/*
+venv
