@@ -3,17 +3,11 @@ import requests
 
 
 class BaseClient:
-
+    """
+    This client can be used to store common base urls and other config stuff.
+    """
     def __init__(self):
         self.base_url = ""
         self.requests = requests.Session()
-
-    @staticmethod
-    def parse_response(response):
-        try:
-            response_body = response.json()
-        except JSONDecodeError:
-            response_body = response.text
-        return response.status_code, response_body
 
 
