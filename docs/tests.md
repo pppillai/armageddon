@@ -17,9 +17,5 @@
   #### New Endpoint for existing api
     - In the class for the api add the method exposing the endpoint.
 
-### Running the Tests:
-  - make sure virtual env is running.
-  - In a terminal in the root of armageddon project run the following command:
-    - pytest --html report.html tests/
 
 - [HomePage](../README.md)

@@ -1,7 +1,8 @@
 # Setup
 
 ### Prerequisite
-- Install ![Python3](https://realpython.com/installing-python/)
+- Install Python3 ![python3](https://realpython.com/installing-python/)
+- Install virtual environment ![venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
 ### Clone the repository
   - For SSH: 
@@ -11,12 +12,14 @@
   - For HTTP: 
 
     `git clone https://github.com/pppillai/armageddon.git`
-
-### Create virtual env ![virtual env](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-### Install the requried packages
     
+### Steps
+ 
     $ cd <root_of_armageddon>
+    $ python3 -m venv nameyouwant
+    $ source nameyouwant/bin/activate
     $ pip install --editable .
+    $ pytest --html=report.html tests
     
     
     
