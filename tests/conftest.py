@@ -5,7 +5,7 @@ import time
 
 # client fixtures
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def sbdb_close_approach_data_client():
     from clients.nasa import SBDBCloseApproachDataClient
     return SBDBCloseApproachDataClient()
