@@ -10,6 +10,8 @@ setup(
         "loguru==0.5.0",
         "jsons==1.2",
         "requests==2.22.0",
-        "requests-toolbelt==0.9.1"
+        "requests-toolbelt==0.9.1",
+        "flask",
+        "gunicorn"
     ]
 )

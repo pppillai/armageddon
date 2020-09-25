@@ -1,6 +1,6 @@
 import jsons
 
-from tests.reponse_data_classes import SBDBCloseApproachResponse
+from clients.data_classes.reponse_data_classes import SBDBCloseApproachResponse
 
 
 def test_default_query_params_setup_for_search(sbdb_close_approach_data_client):
