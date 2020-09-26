@@ -6,7 +6,7 @@
 
 - ![How to write tests](/docs/tests.md)
 
-- ![Screenshots](/docs/screenshots.md)
+- ![Screenshots](/docs/screenshot.md)
 
 "armageddon" is a api tool to test public apis.
 As of now tests for SBDB Close-Approach Data API is implemented.
