@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="armageddon",
-    version="01",
+    version="1.0.0",
     author="pradeep",
     install_requires=[
         "pytest",
