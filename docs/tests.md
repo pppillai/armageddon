@@ -1,12 +1,13 @@
 # How to write Tests
 
 ### Structure of the framework:
-  - clients package: Contains all the client api as sub pacakages.
-  - utils package: Utility methods.
+  - clients package: Contains all the client api as sub packages.
+  - utils package: Contains Utility methods.
   - docs: 
   - tests package: Contains tests files and response dataclasses.
 
 ### Writing Tests:
+
   #### New Api
     - Create a new package.
     - Write a class and implement the exposed endpoints.

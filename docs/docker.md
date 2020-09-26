@@ -1,15 +1,17 @@
 # docker
 
     - To download and run the latest image on your local run the following commands:
+        
         $ docker pull armageddon:1.0.0
+        
         $ docker run -it -p 8090:4000 armageddon:1.0.0
         
         Port 4000 is exposed from the container.
-        Port 8090 can be configured.
+        Port 8090 is of local machine and can be different.
 
 ### Build docker and run the image
 
-    - Navigate to the root of the project
+    - Navigate to root of the project
     
     - The following command creates an image in your local machine:
         $ docker build --tag <imagename>:<tagname> .
@@ -25,7 +27,9 @@
         $ docker push <your_username>/<imagename>:<tagname>
          
 ### Download docker image from Docker Hub and run the image
+    
     - The following command downloads the image from docker hub
+    
         $ docker pull <your_username>/<imagename>:<tagname>
         
     - Run the docker run command as mentioned in "Build docker and run the image" section.
