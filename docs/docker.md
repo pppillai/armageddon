@@ -4,7 +4,7 @@
         
         $ docker pull armageddon:1.0.2
         
-        $ docker run -it -p 8090:4000 armageddon:1.0.0
+        $ docker run -it -p 8090:4000 armageddon:1.0.2
         
         Port 4000 is exposed from the container.
         Port 8090 is of local machine and can be different.
