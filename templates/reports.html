@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Armageddon</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Armageddon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
-<div>
-  <header class="bg-primary text-white">
-    <div class="container text-center">
-      <h1>Welcome to armegaddon!</h1>
-        <p class="lead">armegaddon is a dockerized tool to test SBDB Close-Approach Data API.</p>
-        <p class="lead">If you are reading this the container is running and listening on port 8090 (configurable with docker command)</p>
-        <p class="lead">Please read thorough the entire document before playing with it.</p>
-    </div>
-  </header>
-    </div>
+<div class="container-md bg-primary">
+         <div class="container-md bg-light">
+            <header>
+               <div class="container text-center mx-md-n5">
+                  <h1>Welcome to armegaddon!</h1>
+                  <p class="lead">armegaddon is a dockerized tool to test SBDB Close-Approach Data API.</p>
+                  <p class="lead">If you are reading this the container is running and listening on port 8090
+                     (configurable with docker command)
+                  </p>
+                  <p class="lead">Please read thorough the entire document before playing with it.</p>
+               </div>
+            </header>
+         </div>
+      </div>
 <!-- nav -->
-    <section id="allbuttons" class="bg-light">
-      <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <a class="btn btn-secondary" href="{{url_for('home')}}" role="button">Home</a>
-          <a class="btn btn-secondary" href="{{url_for('cleanup')}}" role="button">Cleanup</a>
-          <a class="btn btn-secondary" href="{{url_for('all_tests')}}" role="button">RunAllTests</a>
-<!--          <a class="btn btn-secondary" href="{{url_for('reports')}}" role="button">Reports</a>-->
-          </div>
-      </div>
-      </div>
+<section id="allbuttons" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <a class="btn btn-secondary" href="{{url_for('home')}}" role="button">Home</a>
+                <a class="btn btn-secondary" href="{{url_for('cleanup')}}" role="button">Cleanup</a>
+                <a class="btn btn-secondary" href="{{url_for('all_tests')}}" role="button">RunAllTests</a>
+                <!--          <a class="btn btn-secondary" href="{{url_for('reports')}}" role="button">Reports</a>-->
+            </div>
+        </div>
+    </div>
 
-    </section>
+</section>
 <div class="container" style="min-height:100%; width:80%">
-	{% with messages = get_flashed_messages(with_categories=true) %}
-	  {% if messages %}
-	    {% for category, message in messages %}
-		  <div class="alert {{category}} alert-dismissible" role="alert">
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-			{{message}}
-		  </div>
-		{% endfor %}
-	  {% endif %}
-	{% endwith %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert {{category}} alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+        </button>
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 </div>
 
 
-<section id="ReportLinks" >
-  <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <div>
-                {%if links.__len__() == 0 %}
-                {% else %}
+<section id="ReportLinks">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div>
+                    {%if links.__len__() == 0 %}
+                    {% else %}
                     <ul class="list-group">
                         {% for name in links %}
-                            <li class="list-group-item"><a href={{name}}>{{name}}</a></li>
-                            <!--            <div><a href={{name}}>{{name}}</a></div>-->
+                        <li class="list-group-item"><a href={{name}}>{{name}}</a></li>
+                        <!--            <div><a href={{name}}>{{name}}</a></div>-->
                         {% endfor %}
                     </ul>
-                {% endif %}
+                    {% endif %}
+                </div>
             </div>
         </div>
-      </div>
-  </div>
+    </div>
 </section>
 
 
-<section id="ImpMessage" >
-  <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <span class="badge badge-warning">Make sure you stop the container and remove it after use!</span>
-          </div>
-      </div>
-  </div>
+<section id="ImpMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <span class="badge badge-warning">Make sure you stop the container and remove it after use!</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 

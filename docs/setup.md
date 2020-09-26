@@ -13,7 +13,7 @@
 
     `git clone https://github.com/pppillai/armageddon.git`
     
-### Steps
+### Steps to run test locally without docker container
  
     $ cd <root_of_armageddon>
     $ python3 -m venv nameyouwant
@@ -21,6 +21,8 @@
     $ pip install --editable .
     $ pytest --html=report.html tests
     
+    
+### Steps to run the test locally with docker container
     
     
 - [HomePage](../README.md)

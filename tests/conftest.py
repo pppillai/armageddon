@@ -7,6 +7,11 @@ import time
 
 @pytest.fixture(scope="function")
 def sbdb_close_approach_data_client():
+    """
+    A new instance of SBDBCloseApproachClient object will be returned
+    for each test as the fixture is function scoped.
+    :return: SBDBCloseApproachDataClient object
+    """
     from clients.nasa import SBDBCloseApproachDataClient
     return SBDBCloseApproachDataClient()
 

@@ -36,7 +36,7 @@ def test_default_query_params_setup_for_search(sbdb_close_approach_data_client):
     assert default_params_resp.data == no_params_resp.data
 
 
-def test_name_in_response_when_body_is_set_to_all(sbdb_close_approach_data_client):
+def test_name_in_field_list_when_body_is_set_to_all(sbdb_close_approach_data_client):
     """
     Given: I have close approach data client.
     And: I add body param with value "All".

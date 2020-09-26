@@ -55,7 +55,7 @@ def cleanup():
         return_code = e.returncode
         flash(f"Cleanup did not complete successfully. Return code of process: {return_code}", "alert alert-danger")
 
-    return render_template('/cleanup.html')
+    return redirect(url_for('home'))
 
 
 @app.route('/')
