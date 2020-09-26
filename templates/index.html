@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Armageddon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+<div>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to armegaddon!</h1>
+        <p class="lead">armegaddon is a dockerized tool to test SBDB Close-Approach Data API.</p>
+        <p class="lead">If you are reading this the container is running and listening on port 8090 (configurable with docker command)</p>
+        <p class="lead">Please read thorough the entire document before playing with it.</p>
+    </div>
+  </header>
+    </div>
+<div class="container" style="min-height:100%; width:80%">
+	{% with messages = get_flashed_messages(with_categories=true) %}
+	  {% if messages %}
+	    {% for category, message in messages %}
+		  <div class="alert {{category}} alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			{{message}}
+		  </div>
+		{% endfor %}
+	  {% endif %}
+	{% endwith %}
+</div>
+    <!-- nav -->
+    <section id="allbuttons" class="bg-light">
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <a class="btn btn-secondary" href="{{url_for('home')}}" role="button">Home</a>
+          <a class="btn btn-secondary" href="{{url_for('cleanup')}}" role="button">Cleanup</a>
+          <a class="btn btn-secondary" href="{{url_for('all_tests')}}" role="button">RunAllTests</a>
+          <a class="btn btn-secondary" href="{{url_for('reports')}}" role="button">Reports</a>
+          </div>
+      </div>
+      </div>
+
+    </section>
+    <!-- /#sidebar-wrapper -->
+<section id="howtoruncontainer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>How to run tests</h2>
+          <p class="lead">Append test path to the base uri. ie. every python test module is a resource that can be run.</p>
+          <ul>
+            <li>To run all tests eg: <a href="{{url_for('all_tests')}}">{{ url_for('all_tests') }}</a></li>
+            <li>To run individual test module eg: <a href="{{url_for('some_tests', subpath='test_acceptance_scenarios.py')}}">{{ url_for('some_tests', subpath='test_acceptance_scenarios.py') }}</a></li>
+            <li>To run individual test function eg: <a href="{{url_for('some_tests', subpath='test_acceptance_scenarios.py::test_default_query_params_setup_for_search')}}">{{ url_for('some_tests', subpath='test_acceptance_scenarios.py::test_default_query_params_setup_for_search') }}</a></li>
+            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ViewReports" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>View Reports</h2>
+          <p class="lead">All reports are html, generated with py-html</p>
+          <ul>
+            <li>Navigate to <a href="{{url_for('reports')}}">{{ url_for('reports') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="AvailableTestFiles" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Available Test Files</h2>
+          <p class="lead">All available python test modules are listed. To run any of the modules click on the link</p>
+          <ul>
+            {% for testname in testlist %}
+            <li>Navigate to <a href="{{url_for('some_tests', subpath=testname)}}">{{ url_for('some_tests', subpath=testname) }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="CleanUp" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>CleanUp</h2>
+          <p class="lead">Delete all the reports. Once you stop docker all reports are lost.</p>
+          <ul>
+            <li>Navigate to <a href="{{url_for('cleanup')}}">{{ url_for('cleanup') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="ImpMessage" >
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <span class="badge badge-warning">Make sure you stop the container and remove it after use!</span>
+          </div>
+      </div>
+  </div>
+</section>
+  <!-- Bootstrap core JavaScript -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+</body>
+</html>
