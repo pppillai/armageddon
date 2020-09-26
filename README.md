@@ -16,3 +16,4 @@ Libraries used as follows:
 - ![pytest](https://docs.pytest.org/en/stable/): framework for running tests.
 - ![flask](https://flask.palletsprojects.com/en/1.1.x/): framework for web.
 - ![docker](https://www.docker.com/): to contanizer the tool.
+- ![gunicorn](https://gunicorn.org/): wsgi server to serve the flask app.
