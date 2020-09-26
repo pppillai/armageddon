@@ -1,8 +1,8 @@
 # Setup
 
 ### Prerequisite
-- Install Python3 ![python3](https://realpython.com/installing-python/)
-- Install virtual environment ![venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+  - Install Python3 ![python3](https://realpython.com/installing-python/)
+  - Install virtual environment ![venv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
 ### Clone the repository
   - For SSH: 
@@ -20,9 +20,6 @@
     $ source nameyouwant/bin/activate
     $ pip install --editable .
     $ pytest --html=report.html tests
-    
-    
-### Steps to run the test locally with docker container
     
     
 - [HomePage](../README.md)
