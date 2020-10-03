@@ -10,6 +10,8 @@
 
 - [Screenshots](/docs/screenshot.md)
 
+- [Release Notes](/CHANGELOG.md)
+
 
 ### Release (2020-October-04)
     - tests for hello svc (kubernetes/docker) api are implemented.
