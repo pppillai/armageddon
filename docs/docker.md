@@ -2,7 +2,7 @@
 
     - To download and run the latest image on your local run the following commands:
         
-        $ docker pull armageddon:1.0.2
+        $ docker pull armageddon:1.0.3
         
         $ docker run -it -p 8090:4000 pppm/armageddon:1.0.3
         
