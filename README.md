@@ -2,6 +2,8 @@
 
 **"armageddon" is a api tool to test public apis.**
 
+- [TL;DR](/docs/TLDR.md)
+
 - [Setup](/docs/setup.md)
 
 - [Docker](/docs/docker.md)
