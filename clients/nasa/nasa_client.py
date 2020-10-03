@@ -1,5 +1,7 @@
 from clients.base_client import BaseClient
 from urllib.parse import urlencode
+
+from clients.config import Config
 from clients.utils.parse import parse_response, stringify_query_param
 import copy
 
@@ -23,7 +25,9 @@ class SBDBCloseApproachDataClient(BaseClient):
     """
     def __init__(self):
         super().__init__()
-        self._base_url = "https://ssd-api.jpl.nasa.gov/cad.api"
+        self._base_url = Config.NASA_SBDB_URL
+        if not self._base_url:
+            assert False, "URL FOR SBDBCloseApproachDataClient is not set"
         self._version = '1.1'
         self._query_params = copy.deepcopy(DEFAULT_QUERY_DICT)
 

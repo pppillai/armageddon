@@ -9,7 +9,12 @@
 - [Screenshots](/docs/screenshot.md)
 
 "armageddon" is a api tool to test public apis.
-As of now tests for SBDB Close-Approach Data API is implemented.
+- Release (2020-September-27)
+    - tests for SBDB Close-Approach Data API are implemented.
+
+- Release (2020-October-04)
+    - tests for hello svc (kubernetes/docker) api ared implemented.
+
 
 Tests are implemented in Python 3.8 version.
 

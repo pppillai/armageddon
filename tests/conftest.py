@@ -16,6 +16,17 @@ def sbdb_close_approach_data_client():
     return SBDBCloseApproachDataClient()
 
 
+@pytest.fixture(scope="function")
+def hello_svc_client():
+    """
+    A new instance of HelloServiceClient object will be returned
+    for each test as the fixture is function scoped.
+    :return: HelloServiceClient object
+    """
+    from clients.hello_svc import HelloServiceClient
+    return HelloServiceClient()
+
+
 @pytest.fixture(autouse=True)
 def logger(request):
     log = logging.getLogger(__name__)
