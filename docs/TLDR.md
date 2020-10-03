@@ -2,7 +2,7 @@
 
 
 * Open a new Terminal
-    > $ docker pull armageddon:1.0.3
+    > $ docker pull pppm/armageddon:1.0.3
     
     > $ docker run -it -p 8090:4000 pppm/armageddon:1.0.3
     
