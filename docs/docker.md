@@ -18,6 +18,9 @@
         
     - The following command create a container and run it from the image:
         $ docker run -it -p 8090:4000 --name <nameYouWantOnLocalMachine> <imagename>:<tagname>
+    
+    - To pass environment variables:
+        $ docker run -e ENV_VAR_1=1 -e ENV_VAR_2=2 -it -p 8090:4000 --name <nameYouWantOnLocalMachine> <imagename>:<tagname>
         
 ### Build docker and publish to docker hub
 
