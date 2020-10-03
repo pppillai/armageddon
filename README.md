@@ -8,6 +8,8 @@
 
 - [Screenshots](/docs/screenshot.md)
 
+- [ReleaseNotes](/CHANGELOG.md)
+
 "armageddon" is a api tool to test public apis.
 - Release (2020-September-27)
     - tests for SBDB Close-Approach Data API are implemented.
