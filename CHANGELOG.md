@@ -4,8 +4,8 @@
 
 ### Added
 
-* Added Config Class to set urls.
-* Added hellosvc client
+* Config Class to set urls.
+* hellosvc client and tests.
   * hellosvc is project described [here](https://github.com/pppillai/pp-eye) 
   * make sure hellosvc is running on the cluster.
       * Use KUBECLUSTERIP AND NODEPORTPORT from env variable or change values in Config class.
